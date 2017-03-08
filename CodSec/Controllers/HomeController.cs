@@ -6,23 +6,25 @@ using System.Web.Mvc;
 
 namespace CodSec.Controllers
 {
+
     public class HomeController : Controller
     {
+        [AllowAnonymous]
         public ActionResult Index()
         {
             return View();
         }
 
-        public ActionResult About()
+        public ActionResult Add()
         {
-            ViewBag.Message = "Your application description page.";
+            ViewBag.Message = "This is the Add Page";
 
             return View();
         }
 
-        public ActionResult Contact()
+        public ActionResult List()
         {
-            ViewBag.Message = "Your contact page.";
+            ViewBag.Message = "This is the List Page";
 
             return View();
         }
