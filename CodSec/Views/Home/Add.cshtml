@@ -1,7 +1,21 @@
-﻿@{
+﻿@model CodSec.Models.Code
+
+@{
     ViewBag.Title = "Add";
 }
 <h2>@ViewBag.Title</h2>
 <h3>@ViewBag.Message</h3>
 
 <p>Add new code</p>
+
+<div class="form-group">
+    <div>
+        @Html.LabelFor(c => c.Description)
+        @Html.TextBoxFor(c => c.Description, new { @class = "form-control" })
+    </div>
+    
+    <div>
+        @Html.LabelFor(c => c.Pin)
+        @Html.TextBoxFor(c => c.Pin, new { @class = "form-control" })
+    </div>
+</div>
